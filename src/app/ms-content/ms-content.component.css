@@ -12,5 +12,30 @@
   color: #413450;
   font-family: Cambria, Cochin, Georgia, Times, 'Times New Roman', serif;
 }
+.header-content h1{
+  font-size: xx-large;
+  margin-top: 10px;
+}
+
+.custom-container {
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+/* Tăng khoảng cách padding cho màn hình trung bình */
+@media (min-width: 768px) {
+  .custom-container {
+    padding-left: 50px;
+    padding-right: 50px;
+  }
+}
+
+/* Tăng khoảng cách padding cho màn hình lớn */
+@media (min-width: 1200px) {
+  .custom-container {
+    padding-left: 140px;
+    padding-right: 140px;
+  }
+}
 
 

@@ -64,8 +64,10 @@
     font-size: 17px;
   }
 
-  nav i{
+  .ms-function i{
     color: #fff;
+    margin: 0 10px;
+    font-size: 20px;
   }
 
   .content{

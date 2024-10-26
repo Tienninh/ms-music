@@ -1,10 +1,29 @@
 <section>
-  <div class="row">
+  <div class="container-fluid custom-container">
     <div class="all-content">
-      <div class="header-content">
+      <div class="header-content text-center mb-4">
         <h3>Classical music</h3>
         <h1>Discover the world of music with us</h1>
+      </div>
+
+      <div class="body-content">
+        <div class="row justify-content-center">
+          <!-- Card items with 4 per row -->
+          <div class="col-md-3" *ngFor="let item of album; let i = index">
+            <div class="card">
+              <img src="{{ item.url }}" class="card-img-top" alt="Music Image {{ i + 1 }}">
+              <div class="card-body">
+                <h5 class="card-title">{{ item.name }}</h5>
+                <h6 class="card-subtitle mb-2 text-muted">{{ item.singer }}</h6>
+                <p class="card-text">{{ item.description }}</p>
+              </div>
+            </div>
+          </div>
+        </div>
       </div>
     </div>
   </div>
 </section>
+
+<!-- Bootstrap CSS -->
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
