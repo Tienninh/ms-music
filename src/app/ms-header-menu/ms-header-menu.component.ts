@@ -22,12 +22,12 @@ export class MsHeaderMenuComponent implements OnInit {
       title: 'California',
       description: "This is video one"
     },
-    {
-      id: 1,
-      url :"../../assets/public/vid/Background.mp4",
-      title: 'Australia',
-      description: "This is video two"
-    },
+    // {
+    //   id: 1,
+    //   url :"../../assets/public/vid/Background.mp4",
+    //   title: 'Australia',
+    //   description: "This is video two"
+    // },
   ]
 
   currentSlide = 0;

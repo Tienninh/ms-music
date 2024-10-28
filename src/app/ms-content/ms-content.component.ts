@@ -9,6 +9,9 @@ export class MsContentComponent implements OnInit {
 
   constructor() { }
 
+  //rank 1 : up
+  //rank 2 : right
+  //rank 3 : down
   album: any[] = [
     {
       id:1,
@@ -17,6 +20,7 @@ export class MsContentComponent implements OnInit {
       name:"Chăm hoa",
       author:"",
       description:"Explore timeless symphonies and discover the masterpieces of classical music.",
+      rank:2
     },
     {
       id:2,
@@ -25,6 +29,7 @@ export class MsContentComponent implements OnInit {
       name:"ĐỪNG LÀM TRÁI TIM ANH ĐAU",
       author:"",
       description:"Explore timeless symphonies and discover the masterpieces of classical music.",
+      rank:1
     },
     {
       id:3,
@@ -33,6 +38,7 @@ export class MsContentComponent implements OnInit {
       name:"Die With A Smile",
       author:"",
       description:"Explore timeless symphonies and discover the masterpieces of classical music.",
+      rank:1
     },
     {
       id:4,
@@ -41,8 +47,23 @@ export class MsContentComponent implements OnInit {
       name:"APT",
       author:"",
       description:"Explore timeless symphonies and discover the masterpieces of classical music.",
+      rank:3
     },
   ]
+
+  getColor(rank: number): string {
+    switch (rank) {
+      case 1:
+        return 'green'; // Màu xanh lá
+      case 2:
+        return 'gray';  // Màu xám
+      case 3:
+        return 'red';   // Màu đỏ
+      default:
+        return 'transparent'; // Mặc định là trong suốt
+    }
+  }
+
   ngOnInit() {
   }
 
