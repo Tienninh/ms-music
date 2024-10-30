@@ -1,4 +1,5 @@
 import { Component, ElementRef, OnInit, QueryList, ViewChild, ViewChildren } from '@angular/core';
+import { Route, Router } from '@angular/router';
 import { url } from 'inspector';
 
 @Component({
@@ -8,7 +9,9 @@ import { url } from 'inspector';
 })
 export class MsHeaderMenuComponent implements OnInit {
   @ViewChildren('myVideo') video!: QueryList<ElementRef<HTMLVideoElement>>;  // Tham chiếu tới video
-  constructor() { }
+  constructor(
+    private router : Router
+  ) { }
 
   isPlaying: boolean = false;  // Trạng thái của nút Play/Pause
   isShuffle: boolean = false;  // Trạng thái của nút Shuffle
@@ -32,6 +35,14 @@ export class MsHeaderMenuComponent implements OnInit {
 
   currentSlide = 0;
   isAuto = true;
+
+  navigateToChannel() {
+    const path = '/pg-channel'; // Đường dẫn bạn muốn điều hướng đến
+    console.log('Navigating to:', path); // In ra đường dẫn trong console
+    this.router.navigate([path]); // Chuyển hướng đến trang pg-channel
+  }
+
+
   // Hàm dừng/phát video khi nhấn nút
   togglePlayPause() {
     // Lấy video hiện tại dựa trên chỉ số currentSlide
